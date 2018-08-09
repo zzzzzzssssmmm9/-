@@ -17,7 +17,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta http-equiv="description" content="This is my page">  
     <!-- 
     <link rel="stylesheet" type="text/css" href="styles.css"> 
-    -->  
+    --> 
+    <script type="text/javascript">
+alert("请认真听讲！！");
+</script> 
   </head>  
   <body>  
     <center>  
@@ -27,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>  -->
     <table width = "200" border ="1" bordercolor = "#00F">  
         <tr>  
-        <td><input type = "button" value = "登      陆" onclick = "window.location.href('login.jsp')"></td> 
+        <td><input type = "button" value = "直接查看" onclick = "window.open('new.jsp')"></td> 
           <td><input type = "button" value = "登      陆" onclick = "window.open('login.jsp')"></td>  
           <td><input type = "button" value = "注      册" onclick = "window.open('register.jsp')"></td>  
         </tr>   

@@ -15,11 +15,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <%
-   String name,email,subject,memo,sex;
+   String name,email,subject,memo,sex,zhan;
   // name=request.getParameter("name");
    name=(String)session.getAttribute("username");
    //sex=request.getParameter("sex");
   // email=request.getParameter("email");
+  zhan=request.getParameter("zhan");
    subject=request.getParameter("subject");
    memo=request.getParameter("memo");
    try{
@@ -31,11 +32,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	request.setCharacterEncoding("utf-8");
    	response.setCharacterEncoding("UTF-8");
    	Connection conn = DriverManager.getConnection(url,username,password);	// 创建Connection连接
-   String sql="insert into messa(name,subject,memo,time) values(?,?,?,NOW())";
+   String sql="insert into messa(name,subject,memo,time,zhan) values(?,?,?,NOW(),?)";
    PreparedStatement pst=conn.prepareStatement(sql);
     pst.setString(1,name);
     pst.setString(2,subject);
     pst.setString(3,memo);
+    pst.setString(4,zhan);
     int result =pst.executeUpdate();
      if(result>0)
        {

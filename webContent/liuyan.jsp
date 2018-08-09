@@ -44,6 +44,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <td valign=top bgcolor=yellow>留言:</td> 
 <td><textarea name="memo" rows=4 cols=60></textarea></td> 
 </tr> 
+<tr> 
+<td bgcolor=yellow>是否展示</td> 
+<td>是<input type=radio name="zhan" value="yes" checked>否
+<input type=radio name="zhan" value="no"  checked></td> 
+</tr>
+<tr> 
 <tr align=center><td colspan=2><input type=submit method=send value=我要留言> 
 <input type=reset value=我要重写></td> 
 
